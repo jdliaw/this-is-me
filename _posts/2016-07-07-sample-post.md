@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Markdown Cheatsheet Demo
 updated: 2016-07-07 22:51:45
 ---
