@@ -4,3 +4,6 @@ title: About
 permalink: /about/
 ---
 
+## This is me
+
+and my thoughts.

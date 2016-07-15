@@ -61,6 +61,10 @@ What's best for a woman is when she is allowed to decide ***for herself*** what 
 
 ![Cap4](http://i630.photobucket.com/albums/uu26/dramabeans/drama/2016/OhHaeYoungAgain/OHYA9/OHYA9-00021.jpg)
 
+There's a great line from Roxanne Gay's [*Bad Feminist*]({{site.baseurl}}/2017/07/17/bad-feminist.html) that really captures the idea:
+
+> *“There’s no difference between forcing women to wear hijab and forcing them to not wear. The ultimate decision must be that of the individual.”*
+
 But look. I'm not saying a guy can't tell a girl he likes that he'd rather spend their first night together in a nice place than a motel if she wants to go to a motel. It still is a sweet gesture, and it can be said without tacking on the generalization about women and trying to dictate what all women should and shouldn't do.
 
 <div class="divider"></div>
