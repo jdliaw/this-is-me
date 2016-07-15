@@ -1,14 +1,610 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
+    <title>this is me.</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
     <link>http://jdliaw.github.io/</link>
     <atom:link href="http://jdliaw.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Jul 2016 15:42:19 -0700</pubDate>
-    <lastBuildDate>Sun, 10 Jul 2016 15:42:19 -0700</lastBuildDate>
+    <pubDate>Fri, 15 Jul 2016 00:02:15 -0700</pubDate>
+    <lastBuildDate>Fri, 15 Jul 2016 00:02:15 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>&quot;What does UTM even stand for?&quot;</title>
+        <description>
+</description>
+        <pubDate>Fri, 15 Jul 2016 00:00:00 -0700</pubDate>
+        <link>http://jdliaw.github.io/tech/2016/07/15/utm-tracking.html</link>
+        <guid isPermaLink="true">http://jdliaw.github.io/tech/2016/07/15/utm-tracking.html</guid>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>Statesman</title>
+        <description>
+</description>
+        <pubDate>Fri, 15 Jul 2016 00:00:00 -0700</pubDate>
+        <link>http://jdliaw.github.io/tech/2016/07/15/statesman.html</link>
+        <guid isPermaLink="true">http://jdliaw.github.io/tech/2016/07/15/statesman.html</guid>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>An Issues Archive</title>
+        <description>&lt;h2 id=&quot;a-personal-record&quot;&gt;A Personal Record&lt;/h2&gt;
+
+&lt;p&gt;To remember what I’ve accomplished and learned this summer &amp;amp; help me recount or reuse what I did.&lt;/p&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;In chronological order&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; Bigger tickets will be put in their own post!!&lt;/p&gt;
+
+&lt;h1 id=&quot;adjust-popup-time-on-email-capture-modal&quot;&gt;1. Adjust popup time on Email Capture Modal&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Literally going into the coffeescript file for the email capture modal and changing the timeout from 5000ms to 12000ms.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Learned about the git workflow (PRs &amp;amp; merging into beta &amp;amp; whatnot) and navigating the codebase (ish) though!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;update-publisher-lead-gen-destinations&quot;&gt;2. Update publisher lead gen destinations&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Learned about Sidekiq: enqueues jobs such as sending out emails.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In development, all emails are caught in MailTrap, which you can log into via Bitium.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Redis server needs to be running for jobs to enqueue. Broke my first &amp;amp; learned about specs – you always need to update or add specs for changes that are more than just simple UI things.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;on-ios-bbb-and-powered-by-stackcommerce-footer-logos-blocked-by-add-to-cart-button&quot;&gt;3. on iOS BBB and Powered by StackCommerce footer logos blocked by Add To Cart button&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Simple changing margins in css on mobile settings using javascript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;add-button-to-resend-order-confirmation-email&quot;&gt;4. Add button to resend order confirmation email&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Wow! I got to create a cool button on the Admin page using Bootstrap styles!!! Fun stuff&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Learning erb and how to use buttons to execute a method:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;%= link_to &quot;Resend Confirmation Email&quot;, resend_confirmation_email_admin_order_path(@order), class: &quot;button&quot;, method: :post %&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Setting up routes and the method in the appropriate controller to execute the task:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;routes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rb&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;member&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:resend_confirmation_email&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;controllers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders_controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rb&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;resend_confirmation_email&lt;/span&gt;
+  &lt;span class=&quot;vi&quot;&gt;@order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;send_confirmation_email&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;redirect_to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin_user_order_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Creating specs to test a new feature!!!&lt;/li&gt;
+  &lt;li&gt;Extra special because I had to figure out some Sidekiq stuff&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;controllers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders_controller_spec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rb&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;describe&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;resend_confirmation_email&#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Sidekiq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Testing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fake!&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;enqueues job onto Sidekiq mailer&#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:admin&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;sign_in_as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;
+
+      &lt;span class=&quot;n&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:w_item&lt;/span&gt;
+ 
+      &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:resend_confirmation_email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;id: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Sidekiq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Extensions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;DelayedMailer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+ 
+  &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;redirects to /users/:user_id/orders/:id&#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:admin&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:order&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;sign_in_as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;
+ 
+    &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;id: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;id&lt;/span&gt;
+ 
+    &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;redirect_to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;admin_user_order_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;My first like, kind of grown-up spec where I made a real feature and tested it and everything. Learned a lot and even marked it as my PR I was proud of just because of the struggles it took.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;remove-product-icon-in-bundles&quot;&gt;5. Remove product icon in bundles&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Literally just removed like a div&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;js-example-for-sales-api&quot;&gt;6. JS example for Sales API&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Barragan basically did this for me during one of our pairing sessions lol&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Used &lt;a href=&quot;https://jsfiddle.net/kv67ks0c/&quot;&gt;jsfiddle&lt;/a&gt; &amp;amp; Bootstrap to consume our API endpoint and display sales nicely:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publisher_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;per_page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;//api.stacksocial.com/v0/search/sales?publisher_id=&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publisher_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;amp;per_page=&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;per_page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#sales-template&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Handlebars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;body&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;I honestly didn’t know how to get the json stuff so that was cool??&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;We used &lt;a href=&quot;http://v4-alpha.getbootstrap.com/components/card/#content-types&quot;&gt;Bootstrap cards&lt;/a&gt; to make them nice little sales displays&lt;/li&gt;
+  &lt;li&gt;Also used Handlebars to increase readability / make it look more like a template:&lt;/li&gt;
+  &lt;li&gt;(Explain more about Handlebars here??)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sales-template&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/x-handlebars-template&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;container-fluid&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;row&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    	
+      	&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;col-xs-4&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;card&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+           &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;card-img-top&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;card-block&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h6&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;card-title&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h4&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;card-text&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(Insert screenshot of result here.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reset-password-email-not-branded&quot;&gt;7. Reset password email not branded&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mostly looking and copying. Adjusting the ClearanceMailer to use the same BaseMailer that the TransactionalMailer was using to get the header, footer, and nice formatting in the order confirmation etc. emails&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ClearanceMailer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;BaseMailer&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;change_password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;publisher_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@current_publisher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Publisher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;publisher_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;mail&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;to: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    	 &lt;span class=&quot;ss&quot;&gt;from: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@current_publisher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;platform_name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &amp;lt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@current_publisher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;support_email&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    	 &lt;span class=&quot;ss&quot;&gt;subject: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Change your password&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    	 &lt;span class=&quot;s2&quot;&gt;&quot;X-From-Name&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@current_publisher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;platform_name&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Then once again kind of “cherry-picking”, if you will (I’m probably totally using it wrong), the erb view from the order confirmation emails to have the content &amp;amp; button needed for reset password.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;convert-all-state-machines-to-statesman&quot;&gt;8. Convert all state machines to statesman&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;My first big, meaty ticket!!! See &lt;a href=&quot;/2016/07/14/statesman.html&quot;&gt;here&lt;/a&gt; for full post.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;add-academies-section-to-stackcommerce&quot;&gt;9. Add Academies section to stackcommerce&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ez front-end stuff, ya feel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;stackcommerce-vendor-signup-does-not-acknowledge-sign-up&quot;&gt;10. StackCommerce vendor signup does not acknowledge sign up&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Literally the confirmation modal already existed (for instructor sign up), so I just had to add the div to the vendor signup view and the js and everything was already there to get it working&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;add-custom-fields-to-fb-feed-product-catalog&quot;&gt;11. Add custom fields to FB feed product catalog&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tbh I had no idea what I did here, bc Nick just showed me where the file was&lt;/li&gt;
+  &lt;li&gt;Come back to this&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;collect-source-info-for-users-and-orders&quot;&gt;12. Collect source info for users and orders&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Another kind of big, interesting ticket, which I had no idea how to approach but turned out to be pretty simple.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;See &lt;a href=&quot;/2016/07/14/utm-tracking.html&quot;&gt;here&lt;/a&gt; for full post&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;update-seo-meta-description&quot;&gt;13. Update SEO meta description&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Literally Talysson had already made a PR for it, so I just mimicked his changes and added the different titles / descriptions for the different verticals. And Hsieh corrected my syntax / style. Ez.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;product-fields-directly-injects-html-into-page&quot;&gt;14. Product fields directly injects HTML into page&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;WIP, big meaty one again yay!!! The ticket title is not very informative.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 15 Jul 2016 00:00:00 -0700</pubDate>
+        <link>http://jdliaw.github.io/tech/2016/07/15/an-issues-archive.html</link>
+        <guid isPermaLink="true">http://jdliaw.github.io/tech/2016/07/15/an-issues-archive.html</guid>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>Summer&amp;#58; Dipping my toes back into Dramaland</title>
+        <description>&lt;p&gt;Every summer, I realize I can never really leave Dramaland behind and somehow find myself watching a new Korean Drama (or at least parts of it).&lt;/p&gt;
+
+&lt;p&gt;The summer after my first year, I got into &lt;strong&gt;&lt;em&gt;Oh My Ghostess&lt;/em&gt;&lt;/strong&gt; starring &lt;em&gt;Park Bo Young&lt;/em&gt; because of a certain Korean friend of mine who is completely unattainable now (…when friends start dating and disappear off the face of the Earth and then claim that &lt;em&gt;YOU&lt;/em&gt; were the one to disappear because of your relationship… but that’s another story).&lt;/p&gt;
+
+&lt;p&gt;And now it’s the summer after my second year and I’ve been sitting in on random episodes of &lt;strong&gt;&lt;em&gt;Oh Hae Young Again&lt;/em&gt;&lt;/strong&gt; with my roommate, who has been binge watching it instead of studying for her OAT in September. Nice.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i630.photobucket.com/albums/uu26/dramabeans/drama/2016/OhHaeYoungAgain/OHYA7/OHYA7-00014a.jpg&quot; alt=&quot;Cap1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the most part, this drama is like every other drama you encounter in the Korean industry.&lt;/p&gt;
+
+&lt;p&gt;Girl is a the less fortunate type with a past that evokes pity. &lt;br /&gt;
+Guy is the handsome, “higher-class” type whose past is somehow entangled with the girl. &lt;br /&gt;
+Guy and girl meet, and eventually fall in love. &lt;br /&gt;
+And in between all of this, tons of shit happens.&lt;/p&gt;
+
+&lt;p&gt;The one main difference that stood out to me was that there isn’t really a second male lead in this drama’s character web. There’s just one guy, and a main and secondary female lead both vying for his attention.&lt;/p&gt;
+
+&lt;p&gt;So if there’s only one male lead, that means that we don’t really have sides to pick and that we should be rooting for him the entire way, and like him wholeheartedly throughout, right?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wrong.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I found it really hard to like and support the male lead, &lt;em&gt;Do Kyung&lt;/em&gt;, throughout the development of his relationship with &lt;em&gt;Oh Hae Young&lt;/em&gt;. Instead, I found myself not really shipping any couple and felt like the drama was just putting this couple together because they were the main leads and they were supposed to be together, not because they had any special, tangible connection or chemistry. And there were some serious things about his character that irked me and made it impossible for me to empathize with him at all.&lt;/p&gt;
+
+&lt;p&gt;As the drama progressed, I discovered that he suffered from self-entitlement and male superiority as many drama leads, and real life people, do.&lt;/p&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;its-the-little-things-a-person-does-that-reveals-a-lot-about-their-character&quot;&gt;It’s the little things a person does that reveals a lot about their character.&lt;/h2&gt;
+
+&lt;p&gt;In Episode 10, &lt;em&gt;Do Kyung&lt;/em&gt; finally realizes and admits his feelings for &lt;em&gt;Hae Young&lt;/em&gt;, and allows himself to express them freely and ask for her company without pride. And so the two are reunited with shy, but big smiles on their face, as new lovers are, giddy with excitement and happiness.&lt;/p&gt;
+
+&lt;p&gt;After spending a whole night together, driving all the way to the ocean and then eating grilled clams with soju, &lt;em&gt;Hae Young&lt;/em&gt; isn’t too shy or innocent to hint at wanting to end the night “at a motel”. She’s human after all, and has sexuality that is normal and can be portrayed casually as it is in everyday life. She’s not some contorted version of a woman that is supposed to maintain a completely innocent and pure image, but still be sexual in the face of men’s needs. Her sexuality belongs to her and she is free to express it how she wants.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i630.photobucket.com/albums/uu26/dramabeans/drama/2016/OhHaeYoungAgain/OHYA10/ohhaeyoung10-00001a.jpg&quot; alt=&quot;Cap2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Do Kyung&lt;/em&gt; ruins all her ideas of how the night would end by calling a driver, but it’s the next part that really sparked a tinge of displeasure in me. As they get in the car, he says,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“Women shouldn’t sleep at motels anyway.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is supposed to be a really romantic line in this scene. &lt;em&gt;Hae Young&lt;/em&gt; smiles to herself after this, and we’re supposed to think, “Aw, what a sweet guy.” He wants their first night to be special and not in a motel. He’s a &lt;em&gt;true&lt;/em&gt; gentleman.&lt;/p&gt;
+
+&lt;p&gt;But on the other hand, it shows how he is consistently trying to control &lt;em&gt;Hae Young&lt;/em&gt;’s life and deciding what she should or should not do, based on his standards, benefits, or pride.&lt;/p&gt;
+
+&lt;p&gt;With that line, he is basically telling her what he thinks is good for her, and believes that he’s doing her a favor. Like “I think that women who sleep at motels are lesser and if you’re going to be associated with me you’re going to follow my ideas of what a woman should be like, and you don’t really have a choice because I’m just going to do what I want and call a driver and ignore any of your desires. Oh, and I’m doing you a &lt;strong&gt;&lt;em&gt;huge&lt;/em&gt;&lt;/strong&gt; favor so you should thank me.”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i630.photobucket.com/albums/uu26/dramabeans/drama/2016/OhHaeYoungAgain/OHYA10/OHYA10-00051.jpg&quot; alt=&quot;Cap3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, this small line just illuminates a larger problem rooted deeply in our society. Men constantly think that their ideas and beliefs are the right ones, especially when it comes to defining what women can or cannot do. What makes them “good” or “bad”. But this is so wrong, because these views are always coming from their eyes, and more often than not are always skewed to their own benefits and narrow perspective.&lt;/p&gt;
+
+&lt;p&gt;What’s wrong with a woman wanting to spend a night at a motel with a man that she desires? If women have such thoughts, it’s considered unseemly and inappropriate “for a woman”. But men have sexual freedom in that they can spend nights with women in motels without being reprimanded for unseemly behavior. It’s considered normal, or even commendable to do so. In any case, if a night at a motel is what a woman wants, and the consent is there, I don’t see what is wrong or so shameful about it.&lt;/p&gt;
+
+&lt;h4 id=&quot;whats-best-for-a-woman-is-not-what-another-man-defines-as-what-is-best-for-her&quot;&gt;What’s best for a woman is not what another man defines as what is best for her.&lt;/h4&gt;
+
+&lt;p&gt;What’s best for a woman is when she is allowed to decide &lt;strong&gt;&lt;em&gt;for herself&lt;/em&gt;&lt;/strong&gt; what is best for her. It’s when she can make decisions for herself and not be told by society or men whether she should do it or not, especially when it comes to her sexuality. &lt;em&gt;Oh Hae Young&lt;/em&gt; shouldn’t have to appease to whatever &lt;em&gt;Do Kyung&lt;/em&gt; wants her to do or however he wants her to behave. She is her own person who can decide and act for herself, and that is so important.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i630.photobucket.com/albums/uu26/dramabeans/drama/2016/OhHaeYoungAgain/OHYA9/OHYA9-00021.jpg&quot; alt=&quot;Cap4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But look. I’m not saying a guy can’t tell a girl he likes that he’d rather spend their first night together in a nice place than a motel if she wants to go to a motel. It still is a sweet gesture, and it can be said without tacking on the generalization about women and trying to dictate what all women should and shouldn’t do.&lt;/p&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;take-a-second-to-think-about-what-youre-doing-and-why&quot;&gt;Take a second to think about what you’re doing, and why.&lt;/h2&gt;
+
+&lt;p&gt;So the plot of the drama goes a little something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Do Kyung&lt;/em&gt; was a happily engaged man to the woman of his dreams before he was left at the altar. Years later, when he hears about an &lt;em&gt;Oh Hae Young&lt;/em&gt; getting engaged to a man named &lt;em&gt;Tae Jin&lt;/em&gt;, he gets revenge with the help of his friends by ruining &lt;em&gt;Tae Jin&lt;/em&gt;’s business, which blows out of proportion and ends with a lawsuit that forces &lt;em&gt;Tae Jin&lt;/em&gt; to go to jail. Wanting to save his fiancée the embarrassment of having a broke husband in jail, &lt;em&gt;Tae Jin&lt;/em&gt; makes up an excuse and breaks off the engagement. Little does &lt;em&gt;Do Kyung&lt;/em&gt; know, the &lt;em&gt;Oh Hae Young&lt;/em&gt; that &lt;em&gt;Tae Jin&lt;/em&gt; is marrying is not the same one that he almost married.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Yes, he just completely ruined two innocent people’s lives.&lt;/strong&gt; Nice.&lt;/p&gt;
+
+&lt;p&gt;Fast-forward to present time. &lt;em&gt;Do Kyung&lt;/em&gt; has long found out his mistake, and of course feeling guilty, gets &lt;em&gt;Tae Jin&lt;/em&gt; out of jail as soon as possible and probably somehow restores his money too. It’s episode 9 when &lt;em&gt;Tae Jin&lt;/em&gt; is released. Not surprisingly, his first actions are to go see his &lt;em&gt;Oh Hae Young&lt;/em&gt;, his ex-fiancée.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i630.photobucket.com/albums/uu26/dramabeans/drama/2016/OhHaeYoungAgain/OHYA9/OHYA9-00027.jpg&quot; alt=&quot;Cap5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When this happens, however, &lt;em&gt;Do Kyung&lt;/em&gt; is super upset – to the point where he &lt;strong&gt;&lt;em&gt;follows&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;Tae Jin&lt;/em&gt;’s car, and casually crashes into him at a stoplight. And it doesn’t end there. He gets out, and demands &lt;em&gt;Tae Jin&lt;/em&gt; to hit him, a &lt;strong&gt;&lt;em&gt;hundred&lt;/em&gt;&lt;/strong&gt; times, with the condition that he gets to hit &lt;em&gt;Tae Jin&lt;/em&gt; once.&lt;/p&gt;
+
+&lt;p&gt;Melodramatic, much?&lt;/p&gt;
+
+&lt;p&gt;So it’s this super dramatic scene, and you’re like wow, acting. Much emotion and angst. But then when you stop for a second to really process what’s going on… it’s like… why the hell does he want to hit &lt;em&gt;Tae Jin&lt;/em&gt;? Remember, this is the guy that he put into bankruptcy AND into jail, completely ruining his life consequently his marriage (which means these events affected &lt;em&gt;Oh Hae Young&lt;/em&gt; and both of their families), and then was like, whoops wrong person.&lt;/p&gt;
+
+&lt;p&gt;Also recall that the two were engaged to be married before &lt;em&gt;Do Kyung&lt;/em&gt; came in and intervened for all the wrong reasons. This means that the two have an extensive past that &lt;em&gt;Do Kyung&lt;/em&gt; does not have with her, and that relationship was on a path to good places seeing as they were engaged. So it’s not like &lt;em&gt;Tae Jin&lt;/em&gt;’s trying to steal her from him. It’s much the opposite.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i630.photobucket.com/albums/uu26/dramabeans/drama/2016/OhHaeYoungAgain/OHYA9/OHYA9-00013.jpg&quot; alt=&quot;Cap6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No worries, though, because &lt;em&gt;Do Kyung&lt;/em&gt; is nice enough to reveal to us his reasons for his rage towards &lt;em&gt;Tae Jin&lt;/em&gt;. He thinks that &lt;em&gt;Tae Jin&lt;/em&gt; was selfish to break off the engagement and most of all resents &lt;strong&gt;&lt;em&gt;how&lt;/em&gt;&lt;/strong&gt; he broke up with her.&lt;/p&gt;
+
+&lt;p&gt;Okay.&lt;/p&gt;
+
+&lt;p&gt;Granted, I find the breakup clips… skeptical too. &lt;em&gt;Tae Jin&lt;/em&gt; solidifies his reasons for breaking the engagement by explaining that he’s sick of the way she eats. Maybe in Korea this is some ultimate insult that represents the highest capacities of hatred or something. It’s absurd for sure, but given &lt;em&gt;Tae Jin&lt;/em&gt;’s circumstances at the time, which were even more absurd given that he didn’t do anything to deserve it, it’s not really something to complain about. Not that he even has a place to nitpick about how this guy broke up with &lt;em&gt;Oh Hae Young&lt;/em&gt;, and this is not even considering that &lt;strong&gt;&lt;em&gt;he&lt;/em&gt;&lt;/strong&gt; was the one who pushed the poor guy to such lengths, all on “accident”.&lt;/p&gt;
+
+&lt;p&gt;Overall, I feel that this really reveals how self-entitled and selfish &lt;em&gt;Do Kyung&lt;/em&gt; can be. Anyone who really feels bad for accidentally completely ruining someone’s life and marriage would immediatley back down and give the two a chance to start something again if they had any inkling of wanting to, after clearing up all the misunderstanding and getting released from freaking jail.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i630.photobucket.com/albums/uu26/dramabeans/drama/2016/OhHaeYoungAgain/OHYA9/OHYA9-00037.jpg&quot; alt=&quot;Cap7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;They were happily in a relationship on the path to marriage before you intervened and “accidentally” caused so much hurt and anger in their relationship. If you really felt any ounce of guilt for what you did, you wouldn’t stand in the way of their relationship if they decided to pursue anything again. They deserve at least that much after all that you inflicted on them, however unintentional it may be. &lt;strong&gt;And all of this stands even if you have feelings for the girl.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Honestly, if &lt;em&gt;Do Kyung&lt;/em&gt; really cared for and loved &lt;em&gt;Oh Hae Young&lt;/em&gt; that much, he would put her happiness before his, and let her have a chance to find happiness even if it isn’t with him.&lt;/p&gt;
+
+&lt;p&gt;But &lt;em&gt;Do Kyung&lt;/em&gt;’s actions and justification for his actions are just so selfish. He only thinks of his own plight, without thinking twice about others or trying to empathize with their situation. It’s pretty unbelievable.&lt;/p&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;so-you-made-it-to-the-end&quot;&gt;So you made it to the end…&lt;/h2&gt;
+
+&lt;p&gt;Alright, so at this point, if you’re still reading, you might be thinking…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“Ok Jenn, calm down. This is just a drama. It’s a fictional story weaved for people’s entertainment. It’s not going to be perfect.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;All of that is true. It is most definitely a fictional story comprised of fictional characters made for entertainment.&lt;/p&gt;
+
+&lt;h4 id=&quot;however-it-is-a-fictional-story-written-by-real-people-in-the-real-world&quot;&gt;However, it is a fictional story written by &lt;em&gt;real people&lt;/em&gt; in the real world.&lt;/h4&gt;
+
+&lt;p&gt;And naturally, since this story is a manifestation of these real people’s thoughts and ideas, it reflects their perceptions and views of the world &amp;amp; society. Even more than that, TV and the media are huge influences on society and reflect the state of a society at that point.&lt;/p&gt;
+
+&lt;p&gt;It may be a fictional world, but it is very relevant to the world that we live in. And it’s important to be aware of that.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 14 Jul 2016 00:00:00 -0700</pubDate>
+        <link>http://jdliaw.github.io/2016/07/14/oh-hae-young.html</link>
+        <guid isPermaLink="true">http://jdliaw.github.io/2016/07/14/oh-hae-young.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markdown Cheatsheet Demo</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;This is Markdown Cheatsheet Demo for &lt;strong&gt;The Plain&lt;/strong&gt;, this Jekyll theme. Please check the raw content of this file for the markdown usage.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;typography-elements-in-one&quot;&gt;Typography Elements in One&lt;/h2&gt;
+
+&lt;p&gt;Let’s start with a informative paragraph. &lt;strong&gt;This text is bolded.&lt;/strong&gt; But not this one! &lt;em&gt;How about italic text?&lt;/em&gt; Cool right? Ok, let’s &lt;strong&gt;&lt;em&gt;combine&lt;/em&gt;&lt;/strong&gt; them together. Yeah, that’s right! I have code to highlight, so &lt;code class=&quot;highlighter-rouge&quot;&gt;ThisIsMyCode()&lt;/code&gt;. What a nice! Good people will hyperlink away, so &lt;a href=&quot;#&quot;&gt;here we go&lt;/a&gt; or &lt;a href=&quot;http://www.example.com&quot;&gt;http://www.example.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;headings-h1-to-h6&quot;&gt;Headings H1 to H6&lt;/h2&gt;
+
+&lt;h1 id=&quot;h1-heading&quot;&gt;H1 Heading&lt;/h1&gt;
+
+&lt;h2 id=&quot;h2-heading&quot;&gt;H2 Heading&lt;/h2&gt;
+
+&lt;h3 id=&quot;h3-heading&quot;&gt;H3 Heading&lt;/h3&gt;
+
+&lt;h4 id=&quot;h4-heading&quot;&gt;H4 Heading&lt;/h4&gt;
+
+&lt;h5 id=&quot;h5-heading&quot;&gt;H5 Heading&lt;/h5&gt;
+
+&lt;h6 id=&quot;h6-heading&quot;&gt;H6 Heading&lt;/h6&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;footnote&quot;&gt;Footnote&lt;/h2&gt;
+
+&lt;p&gt;Let’s say you have text that you want to refer with a footnote, you can do that too! This is an example for the footnote number one &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. You can even add more footnotes, with link! &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;blockquote&quot;&gt;Blockquote&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Start by doing what’s necessary; then do what’s possible; and suddenly you are doing the impossible. –Francis of Assisi&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; This theme does NOT support nested blockquotes.&lt;/p&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;list-items&quot;&gt;List Items&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First order list item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unordered list can use asterisks&lt;/li&gt;
+  &lt;li&gt;Or minuses&lt;/li&gt;
+  &lt;li&gt;Or pluses&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;code-blocks&quot;&gt;Code Blocks&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;JavaScript syntax highlighting&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Python syntax highlighting&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;No language indicated, so no syntax highlighting.
+But let&#39;s throw in a &amp;lt;b&amp;gt;tag&amp;lt;/b&amp;gt;.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;table&quot;&gt;Table&lt;/h2&gt;
+
+&lt;h3 id=&quot;table-1-with-alignment&quot;&gt;Table 1: With Alignment&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Tables&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Are&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Cool&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;col 3 is&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;right-aligned&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$1600&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;col 2 is&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;centered&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;zebra stripes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;are neat&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;table-2-with-typography-elements&quot;&gt;Table 2: With Typography Elements&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Markdown&lt;/th&gt;
+      &lt;th&gt;Less&lt;/th&gt;
+      &lt;th&gt;Pretty&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Still&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;renders&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;nicely&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;horizontal-line&quot;&gt;Horizontal Line&lt;/h2&gt;
+
+&lt;p&gt;The HTML &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;hr&amp;gt;&lt;/code&gt; element is for creating a “thematic break” between paragraph-level elements. In markdown, you can create a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;hr&amp;gt;&lt;/code&gt; with any of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;___&lt;/code&gt;: three consecutive underscores&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;---&lt;/code&gt;: three consecutive dashes&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;***&lt;/code&gt;: three consecutive asterisks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;renders to:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+
+&lt;h3 id=&quot;youtube-embedded-iframe&quot;&gt;YouTube Embedded Iframe&lt;/h3&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/n1a7o44WxNo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;image&quot;&gt;Image&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://octodex.github.com/images/minion.png&quot; alt=&quot;Minion&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Footnote number one yeah baby! &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;A footnote you can link to - &lt;a href=&quot;#&quot;&gt;click here!&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 07 Jul 2016 00:00:00 -0700</pubDate>
+        <link>http://jdliaw.github.io/2016/07/07/sample-post.html</link>
+        <guid isPermaLink="true">http://jdliaw.github.io/2016/07/07/sample-post.html</guid>
+        
+        
+      </item>
     
   </channel>
 </rss>

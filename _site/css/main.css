@@ -584,7 +584,7 @@ span[data-note] {
     border: 5px solid #fff;
     box-sizing: border-box; }
     .logo a:hover, .logo a:focus {
-      background: #f14e32; }
+      background: #6bc0d0; }
     .logo a:hover + .logo-prompt, .logo a:focus + .logo-prompt {
       display: inline-block !important; }
     .logo a .gravatar {
@@ -620,6 +620,15 @@ span[data-note] {
       top: 50%;
       left: -5px;
       margin-top: -5px; }
+
+.navigation {
+  margin: 0 auto 35px;
+  text-align: center; }
+  .navigation a {
+    text-decoration: none !important;
+    border-bottom: 0; }
+  .navigation a:hover {
+    color: grey; }
 
 iframe {
   margin: 45px 0 !important; }

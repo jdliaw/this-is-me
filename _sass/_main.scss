@@ -132,7 +132,7 @@ span[data-note] {
     box-sizing: border-box;
     &:hover,
     &:focus {
-      background: #f14e32;
+      background: #6bc0d0;
     }
     &:hover + .logo-prompt,
     &:focus + .logo-prompt {
@@ -176,6 +176,18 @@ span[data-note] {
       left: -5px;
       margin-top: -5px;
     }
+  }
+}
+.navigation {
+  margin: 0 auto 35px;
+  text-align: center;
+
+  a {
+    text-decoration: none !important;
+    border-bottom: 0;
+  }
+  a:hover {
+    color: grey;
   }
 }
 iframe {
