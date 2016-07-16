@@ -172,6 +172,9 @@ span[data-note] {
   .navigation a:hover {
     color: grey; }
 
+.rating {
+  float: right; }
+
 iframe {
   margin: 45px 0 !important; }
 
