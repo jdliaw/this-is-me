@@ -136,7 +136,7 @@ var template = Handlebars.compile(source);
 The template is then delivered to the browser in the `<script>` tag. In this example, our templated variables help us extract the data from the JSON object received from the API call.
 
 JSON received from API call:
-![ApiCall]({{site.baseurl}}/assets/images/sales-api.png)
+![ApiCall]({{site.baseurl}}/assets/images/issues-archive/sales-api.png)
 
 How we used Handlebars to extract the `title`, `subtitle`, and `main_image` from each sales in the JSON and put them into pretty cards:
 
@@ -162,7 +162,7 @@ How we used Handlebars to extract the `title`, `subtitle`, and `main_image` from
 
 The final result:
 
-![Result]({{site.baseurl}}/assets/images/sales-api-example.png)
+![Result]({{site.baseurl}}/assets/images/issues-archive/sales-api-example.png)
 
 <div class="divider"></div>
 

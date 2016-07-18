@@ -2,6 +2,7 @@
 layout: post
 title: Summer&#58; Dipping my toes back into Dramaland
 updated: 2016-07-14 22:11:46
+category: thoughts
 ---
 
 Every summer, I realize I can never really leave Dramaland behind and somehow find myself watching a new Korean Drama (or at least parts of it).

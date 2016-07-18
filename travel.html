@@ -1,0 +1,23 @@
+---
+layout: default
+title: Travel
+---
+
+<section>
+  <ul>
+  {% if site.categories.travel == null %}
+    <li> No posts in this category yet!</li>
+  {% else %}
+    {% for post in site.categories.travel %}
+      <li>
+        <div class="post-date">
+          <span>{{ post.date | date: "%b %d, %Y" }}</span>
+        </div>
+        <div class="title">
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </div>
+      </li>
+    {% endfor %}
+  {% endif %}
+  </ul>
+</section>
