@@ -3,6 +3,7 @@ layout: post
 title: Where to eat in Venice
 updated: 2016-07-17 23:48:32
 category: food
+tags: [reviews]
 ---
 
 As a UCLA resident, I often frequent areas such as Sawtelle, Santa Monica, or Koreatown for food.
