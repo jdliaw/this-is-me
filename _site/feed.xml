@@ -6,15 +6,15 @@
 </description>
     <link>http://jdliaw.github.io/</link>
     <atom:link href="http://jdliaw.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 31 Jul 2016 16:09:00 -0700</pubDate>
-    <lastBuildDate>Sun, 31 Jul 2016 16:09:00 -0700</lastBuildDate>
+    <pubDate>Sun, 31 Jul 2016 21:58:43 -0700</pubDate>
+    <lastBuildDate>Sun, 31 Jul 2016 21:58:43 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>&quot;What does UTM even stand for?&quot;</title>
         <description>
 </description>
-        <pubDate>Sun, 31 Jul 2016 16:09:00 -0700</pubDate>
+        <pubDate>Sun, 31 Jul 2016 21:58:43 -0700</pubDate>
         <link>http://jdliaw.github.io/tech/2016/07/31/utm-tracking.html</link>
         <guid isPermaLink="true">http://jdliaw.github.io/tech/2016/07/31/utm-tracking.html</guid>
         
@@ -56,7 +56,7 @@
 - didn’t see porridge &amp;amp; puffs??
 - definitely a taco&lt;/p&gt;
 </description>
-        <pubDate>Sun, 31 Jul 2016 16:09:00 -0700</pubDate>
+        <pubDate>Sun, 31 Jul 2016 21:58:43 -0700</pubDate>
         <link>http://jdliaw.github.io/food/2016/07/31/smorgasburg-la.html</link>
         <guid isPermaLink="true">http://jdliaw.github.io/food/2016/07/31/smorgasburg-la.html</guid>
         
@@ -86,7 +86,7 @@
 &lt;h2 id=&quot;day-1-saturday&quot;&gt;Day 1: Saturday&lt;/h2&gt;
 
 </description>
-        <pubDate>Sun, 31 Jul 2016 16:09:00 -0700</pubDate>
+        <pubDate>Sun, 31 Jul 2016 21:58:43 -0700</pubDate>
         <link>http://jdliaw.github.io/travel/2016/07/31/new-york.html</link>
         <guid isPermaLink="true">http://jdliaw.github.io/travel/2016/07/31/new-york.html</guid>
         
@@ -125,7 +125,7 @@
 
 &lt;p&gt;Beyonce doesn’t apologize for herself she does what she wants and knows what she wants and goes after it. And gets it.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 31 Jul 2016 16:09:00 -0700</pubDate>
+        <pubDate>Sun, 31 Jul 2016 21:58:43 -0700</pubDate>
         <link>http://jdliaw.github.io/thoughts/2016/07/31/beyonce.html</link>
         <guid isPermaLink="true">http://jdliaw.github.io/thoughts/2016/07/31/beyonce.html</guid>
         
@@ -167,7 +167,7 @@
 &lt;p&gt;^^^ This is SO important.&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 31 Jul 2016 16:09:00 -0700</pubDate>
+        <pubDate>Sun, 31 Jul 2016 21:58:43 -0700</pubDate>
         <link>http://jdliaw.github.io/2016/07/31/bad-feminist.html</link>
         <guid isPermaLink="true">http://jdliaw.github.io/2016/07/31/bad-feminist.html</guid>
         
@@ -186,21 +186,33 @@
 
 &lt;p&gt;Overall, it wasn’t a difficult task. Just kind of tedious.&lt;/p&gt;
 
-&lt;p&gt;Implementing the new gem itself was pretty easy, especially because the Order model had already been converted, so I had that as an example to go off of, and even without it, I could easily do it just by looking at their documentation.&lt;/p&gt;
+&lt;p&gt;Implementing the new gem itself was pretty easy, especially because the &lt;code class=&quot;highlighter-rouge&quot;&gt;order&lt;/code&gt; model had already been converted, so I had that as an example to go off of, and even without it, I could easily do it just by looking at their documentation.&lt;/p&gt;
 
 &lt;p&gt;Then the tedious part was removing all references of methods that no longer existed (because transitions were being implemented differently now), and then running test suites and of course breaking a TON (like… a TON), and going through each one and fixing them. And of course, I also had to write my own tests for the state machine. Basically, we just wanted to switch to the new gem and have everything still work as it did with the previous gem.&lt;/p&gt;
 
 &lt;p&gt;A slightly more interesting subject came up when we were considering which models actually needed to store a history of their transitions, because for some models, we probably don’t really care about that, so why take up unnecessary space, right?&lt;/p&gt;
 
-&lt;p&gt;The Order model which had already been implemented was implemented with its own Transition Class because we definitely wanted to keep a history of those. But for these 5 other models, we decided that we would just have the history default to memory and just keep the last transition that occurred. To do this, as per the documentation, you just don’t create &amp;amp; specify its own Transition Class, and it automatically defaults to memory. So we stored it in the “state” columm of each table.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;order&lt;/code&gt; model which had already been implemented was implemented with its own &lt;code class=&quot;highlighter-rouge&quot;&gt;transition class&lt;/code&gt; because we definitely wanted to keep a history of those. But for these 5 other models, we decided that we would just have the history default to memory and just keep the last transition that occurred. To do this, as per the documentation, you just don’t create &amp;amp; specify its own &lt;code class=&quot;highlighter-rouge&quot;&gt;transition class&lt;/code&gt;, and it automatically defaults to memory. So we stored it in the &lt;code class=&quot;highlighter-rouge&quot;&gt;state&lt;/code&gt; columm of each table.&lt;/p&gt;
 
-&lt;p&gt;As I was going through specs and prying af to figure out how to fix certain ones whose problems were not as apparent, I found that the state machine wasn’t reading the last transition from the “state” column in the table, so often it would just go to the initial state and perform its transitions that way, which meant that all the transitions that weren’t supposed to be starting from the inital state were wrong.&lt;/p&gt;
+&lt;p&gt;As I was going through specs and prying af to figure out how to fix certain ones whose problems were not as apparent, I found that the state machine wasn’t reading the last transition from the &lt;code class=&quot;highlighter-rouge&quot;&gt;state&lt;/code&gt; column in the table, so often it would just go to the initial state and perform its transitions that way, which meant that all the transitions that weren’t supposed to be starting from the inital state were wrong.&lt;/p&gt;
 
-&lt;p&gt;So we dug through the gem’s source code a bit and found that the state machine reads from a “History” (instance?? class?? im not even sure) to determine what the current state is and from there validate transition requests and perform transitions. So we added a line in the state machine declaration to save the last transition into the history.&lt;/p&gt;
+&lt;p&gt;So we dug through the gem’s source code a bit and found that the state machine reads from a &lt;code class=&quot;highlighter-rouge&quot;&gt;history&lt;/code&gt; attribute to determine what the current state is and from there validate transition requests and perform transitions. So we added a line in the state machine declaration to save the last transition into the history.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;state_machine&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;    &lt;span class=&quot;vi&quot;&gt;@_state_machine&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;      &lt;span class=&quot;vi&quot;&gt;@state_machine&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;OrderStateMachine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;state&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;        &lt;span class=&quot;vi&quot;&gt;@state_machine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;history&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Statesman&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Adapters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;MemoryTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;      &lt;span class=&quot;vi&quot;&gt;@state_machine&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Basically, I spent a lot of time running &amp;amp; fixing specs, so it didn’t turn out to be that interesting after all. Sad.&lt;/p&gt;
 
-&lt;p&gt;Also, Cory suggested that I submit our fix for persisting transitions to memory as a PR to the Statesman gem as a cool open source kind of contribution, which sounded pretty dope to me, so I opened up an issue about it but they haven’t said a thing… rip.&lt;/p&gt;
+&lt;p&gt;Also, Cory suggested that I submit our fix for persisting transitions to memory as a PR to the &lt;strong&gt;&lt;em&gt;Statesman&lt;/em&gt;&lt;/strong&gt; gem as a cool open source kind of contribution, which sounded pretty dope to me, so I opened up an issue about it but they haven’t said a thing… rip.&lt;/p&gt;
 </description>
         <pubDate>Sun, 31 Jul 2016 00:00:00 -0700</pubDate>
         <link>http://jdliaw.github.io/tech/2016/07/31/statesman.html</link>
